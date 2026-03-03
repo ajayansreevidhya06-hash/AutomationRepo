@@ -6,15 +6,11 @@ import org.openqa.selenium.WebElement;
 public class WebElementCommands extends Base{
 
 	
-	public void verfifyWebElements()
-	{
-	  driver.navigate().to("https://selenium.qabible.in/simple-form-demo.php");
-		//text box located
-		WebElement messageBox =driver.findElement(By.id("single-input-field"));
-		
-		//to enter text into text box
-		messageBox.sendKeys("Test Message");
-		
+	public void verifyWebElements()
+	 {
+	    driver.navigate().to("https://selenium.qabible.in/simple-form-demo.php");
+		WebElement messageBox =driver.findElement(By.id("single-input-field"));  //text box located
+		messageBox.sendKeys("Test Message");  //to enter text into text box
 		WebElement showButton =driver.findElement(By.id("button-one"));
 		showButton.click();
 		
@@ -27,7 +23,7 @@ public class WebElementCommands extends Base{
 		
 		WebElementCommands objWebElementCommands =new WebElementCommands();
 		objWebElementCommands.browserLaunch();
-		objWebElementCommands.verfifyWebElements();
+		objWebElementCommands.verifyWebElements();
 
 	}
 
