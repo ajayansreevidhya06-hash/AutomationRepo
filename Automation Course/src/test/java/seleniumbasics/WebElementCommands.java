@@ -9,9 +9,13 @@ public class WebElementCommands extends Base{
 	public void verifyWebElements()
 	 {
 	    driver.navigate().to("https://selenium.qabible.in/simple-form-demo.php");
-		WebElement messageBox =driver.findElement(By.id("single-input-field"));  //text box located
+		
+	    WebElement messageBox =driver.findElement(By.id("single-input-field"));  //text box located
 		messageBox.sendKeys("Test Message");  //to enter text into text box
+		
 		WebElement showButton =driver.findElement(By.id("button-one"));
+		System.out.println(showButton.isDisplayed());
+		System.out.println(showButton.isEnabled());
 		showButton.click();
 		
 		WebElement yourMessage = driver.findElement(By.id("message-one"));

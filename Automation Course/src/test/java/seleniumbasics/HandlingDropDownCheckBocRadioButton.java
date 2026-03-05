@@ -18,10 +18,30 @@ public class HandlingDropDownCheckBocRadioButton extends Base{
 		select.selectByVisibleText("SQL");
 		
 	}
+	
+	public void verfiyCheckBox() 
+	{
+		driver.navigate().to("https://www.webdriveruniversity.com/Dropdown-Checkboxes-RadioButtons/index.html");
+		WebElement checkbox=driver.findElement(By.xpath("//input[@value='option-1']"));
+		System.out.println("Before selection "+checkbox.isSelected()); //before
+		checkbox.click();
+		System.out.println(checkbox.isSelected());//after checkBox selection
+		
+	}
+	public void verfiyRadioButton() 
+	{
+		driver.navigate().to("https://www.webdriveruniversity.com/Dropdown-Checkboxes-RadioButtons/index.html");
+		WebElement radioButton=driver.findElement(By.xpath("//input[@value='green']"));
+		radioButton.click();
+		System.out.println(radioButton.isSelected());
+	}
+	
 	public static void main(String[] args) {
 		HandlingDropDownCheckBocRadioButton objDropdown =new HandlingDropDownCheckBocRadioButton();
 		objDropdown.browserLaunch();
-		objDropdown.verifyDropdown();
+		//objDropdown.verifyDropdown();
+		//objDropdown.verfiyCheckBox();
+		objDropdown.verfiyRadioButton();
 
 	}
 
