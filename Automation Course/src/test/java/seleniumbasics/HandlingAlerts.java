@@ -28,14 +28,24 @@ public class HandlingAlerts extends Base
 		alertObj.accept();
 		//alertObj.dismiss();
 	}
-
+	public void verifyPromptAlert() 
+	{
+		driver.navigate().to("https://demoqa.com/alerts");
+		WebElement promptAlert =driver.findElement(By.id("promtButton"));
+		promptAlert.click();
+		Alert al=driver.switchTo().alert();
+		al.sendKeys("Sree");
+		al.accept();
+		
+	}
 	public static void main(String[] args) 
 	{
 		
 		HandlingAlerts handlingAlertObj=new HandlingAlerts();
 		handlingAlertObj.browserLaunch();
 		//handlingAlertObj.verifySimpleAlert();
-		handlingAlertObj.verifyConfirmAlert();
+		//handlingAlertObj.verifyConfirmAlert();
+		handlingAlertObj.verifyPromptAlert();
 		
 	}
 
