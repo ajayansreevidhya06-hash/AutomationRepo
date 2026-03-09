@@ -33,6 +33,7 @@ public class HandlingActions extends Base
 		WebElement drop=driver.findElement(By.id("droppable"));
 		Actions actionObject=new Actions(driver);
 		actionObject.dragAndDrop(drag, drop).build().perform();
+		
 	}
 	
 	public void verifyKeyboardAction() throws AWTException 
@@ -52,13 +53,18 @@ public class HandlingActions extends Base
 		HandlingActionsObject.browserLaunch();
 		//HandlingActionsObject.verifyRightClick();
 		//HandlingActionsObject.verifyMouseOver();
-		//HandlingActionsObject.verifyDragAndDrop();
-		try {
-			HandlingActionsObject.verifyKeyboardAction();
-		} catch (AWTException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		HandlingActionsObject.verifyDragAndDrop();
+
+		/*
+		 * try { HandlingActionsObject.verifyKeyboardAction(); } catch (AWTException e)
+		 * {
+		 * 
+		 * e.printStackTrace(); }
+		 */
+		 
+		
+		
+		
 	}
 
 }
