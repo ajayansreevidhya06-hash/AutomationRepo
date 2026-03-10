@@ -33,9 +33,9 @@ public class HandlingAlerts extends Base
 		driver.navigate().to("https://demoqa.com/alerts");
 		WebElement promptAlert =driver.findElement(By.id("promtButton"));
 		promptAlert.click();
-		Alert al=driver.switchTo().alert();
-		al.sendKeys("Sree");
-		al.accept();
+		Alert promptAlertObj=driver.switchTo().alert();
+		promptAlertObj.sendKeys("Sree");
+		promptAlertObj.accept();
 		
 	}
 	public static void main(String[] args) 

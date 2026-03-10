@@ -2,6 +2,7 @@ package seleniumbasics;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class Base 
 {
@@ -11,6 +12,7 @@ public class Base
 	public void browserLaunch()
 	{
 		driver=new ChromeDriver(); ////WebDriver Initialization
+		//driver=new FirefoxDriver();
 		driver.get("https://selenium.qabible.in/");
 		driver.manage().window().maximize();
 		//driver.close();
